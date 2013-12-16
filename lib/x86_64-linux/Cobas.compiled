@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1374722184"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -Tlinux -g -gl -vewnhi -Fi/home/roberto/Dropbox/lazarus/Cobas/lib/x86_64-linux -Fl/opt/gnome/lib -Fu/usr/share/lazarus/1.0.12/components/turbopower_ipro/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.0.12/components/printers/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.0.12/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.0.12/lcl/units/x86_64-linux -Fu/usr/share/lazarus/1.0.12/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/1.0.12/packager/units/x86_64-linux -Fu/home/roberto/Dropbox/lazarus/Cobas/ -FU/home/roberto/Dropbox/lazarus/Cobas/lib/x86_64-linux/ -l -dLCL -dLCLgtk2 Cobas.lpr"/>
+</CONFIG>
