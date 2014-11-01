@@ -10,6 +10,8 @@ object frmCalculo: TfrmCalculo
   ClientHeight = 519
   ClientWidth = 827
   Color = clBackground
+  OnClose = FormClose
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '1.0.12.0'
   object panelCorpo: TPanel
@@ -22,7 +24,7 @@ object frmCalculo: TfrmCalculo
     ClientWidth = 667
     Color = clWhite
     ParentColor = False
-    TabOrder = 2
+    TabOrder = 0
     object IpHtmlPanel1: TIpHtmlPanel
       Left = 1
       Height = 421
@@ -33,8 +35,8 @@ object frmCalculo: TfrmCalculo
       BorderStyle = bsSingle
       DataProvider = IpFileDataProvider1
       FixedTypeface = 'Courier New'
-      DefaultTypeFace = 'default'
-      DefaultFontSize = 12
+      DefaultTypeFace = 'Arial'
+      DefaultFontSize = 13
       FlagErrors = False
       PrintSettings.MarginLeft = 0.5
       PrintSettings.MarginTop = 0.5
@@ -51,13 +53,16 @@ object frmCalculo: TfrmCalculo
     Align = alLeft
     ClientHeight = 423
     ClientWidth = 160
-    TabOrder = 0
+    Color = 14869218
+    ParentColor = False
+    TabOrder = 1
     object Edit1: TEdit
       Left = 8
-      Height = 27
+      Height = 29
       Top = 24
       Width = 144
-      Font.Height = -13
+      Font.Height = -16
+      Font.Name = 'Arial'
       OnClick = Edit1Click
       OnKeyPress = Edit1KeyPress
       ParentFont = False
@@ -67,10 +72,12 @@ object frmCalculo: TfrmCalculo
     object bttConverter: TButton
       Left = 24
       Height = 56
-      Top = 216
+      Top = 217
       Width = 112
       Caption = 'Converter'
-      Font.Height = -16
+      Color = 16185078
+      Font.Height = -19
+      Font.Name = 'Arial'
       Font.Quality = fqNonAntialiased
       OnClick = bttConverterClick
       ParentFont = False
@@ -81,7 +88,9 @@ object frmCalculo: TfrmCalculo
       Height = 29
       Top = 72
       Width = 144
-      Font.Height = -13
+      Color = 16185078
+      Font.Height = -16
+      Font.Name = 'Arial'
       ItemHeight = 0
       Items.Strings = (
         'Binário'
@@ -96,9 +105,11 @@ object frmCalculo: TfrmCalculo
     object ComboBox2: TComboBox
       Left = 8
       Height = 29
-      Top = 160
+      Top = 161
       Width = 144
-      Font.Height = -13
+      Color = 16185078
+      Font.Height = -16
+      Font.Name = 'Arial'
       ItemHeight = 0
       Items.Strings = (
         'Binário'
@@ -112,10 +123,11 @@ object frmCalculo: TfrmCalculo
     end
     object Edit2: TEdit
       Left = 8
-      Height = 27
+      Height = 29
       Top = 304
       Width = 144
-      Font.Height = -13
+      Font.Height = -16
+      Font.Name = 'Arial'
       ParentFont = False
       ReadOnly = True
       TabOrder = 4
@@ -184,7 +196,11 @@ object frmCalculo: TfrmCalculo
       Top = 360
       Width = 110
       Caption = 'Conversões'
+      Color = 16185078
+      Font.Height = -16
+      Font.Name = 'Arial'
       OnClick = bttBaseClick
+      ParentFont = False
       TabOrder = 5
     end
   end
@@ -198,36 +214,36 @@ object frmCalculo: TfrmCalculo
     ClientWidth = 827
     Color = 3893827
     ParentColor = False
-    TabOrder = 1
+    TabOrder = 2
     object Label5: TLabel
       AnchorSideLeft.Control = Label3
       AnchorSideLeft.Side = asrCenter
-      Left = 333
-      Height = 19
+      Left = 332
+      Height = 21
       Top = 64
-      Width = 164
+      Width = 166
       BorderSpacing.Left = 50
       Caption = '"Conversor de Bases"'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 16711678
-      Font.Height = -15
-      Font.Name = 'Sans'
+      Font.Height = -17
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
     object Label2: TLabel
       AnchorSideLeft.Control = Label3
       AnchorSideLeft.Side = asrCenter
-      Left = 384
-      Height = 20
+      Left = 380
+      Height = 24
       Top = 40
-      Width = 63
+      Width = 71
       BorderSpacing.Left = 50
       Caption = 'COBAS'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 16711678
-      Font.Height = -16
-      Font.Name = 'Sans'
+      Font.Height = -19
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -235,16 +251,16 @@ object frmCalculo: TfrmCalculo
     object Label3: TLabel
       AnchorSideLeft.Control = Image2
       AnchorSideLeft.Side = asrBottom
-      Left = 248
-      Height = 19
+      Left = 230
+      Height = 21
       Top = 16
-      Width = 335
-      BorderSpacing.Left = 90
+      Width = 371
+      BorderSpacing.Left = 72
       Caption = 'SISTEMA DE APOIO DIDÁTICO PROFISSIONAL'
       Font.CharSet = ANSI_CHARSET
       Font.Color = 16711678
-      Font.Height = -15
-      Font.Name = 'Sans'
+      Font.Height = -17
+      Font.Name = 'Arial'
       ParentColor = False
       ParentFont = False
     end
@@ -999,7 +1015,11 @@ object frmCalculo: TfrmCalculo
       Top = 64
       Width = 75
       Caption = 'Sobre'
+      Color = 16185078
+      Font.Height = -16
+      Font.Name = 'Arial'
       OnClick = bttSobreClick
+      ParentFont = False
       TabOrder = 0
     end
   end

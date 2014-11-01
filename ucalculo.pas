@@ -60,6 +60,9 @@ type
     procedure EscreverHTMLtabela(valor : string; base : integer);
     procedure EscreverHTMLseparacao(valor : string; grupo : integer);
     procedure EscreverHTMLdecomposisao(valor : string; base : integer);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    function OSVersion: string;
   private
     { private declarations }
   public
@@ -69,6 +72,7 @@ type
 var
   frmCalculo: TfrmCalculo;
   reescrever : boolean;
+  charset : string;
 
 implementation
 
@@ -79,6 +83,32 @@ uses
 
 { TfrmCalculo }
 
+// INICIO ------------------------------------------------------------------------------------------------------------
+
+procedure TfrmCalculo.FormCreate(Sender: TObject);        // Defire restrições de O.S.
+begin
+  if OSVersion = 'Linux Kernel' then
+  begin
+    CopyFile('imagens/div2.jpg', '/tmp/div2.jpg');      // Copia imagens para Temp
+    CopyFile('imagens/div8.jpg', '/tmp/div8.jpg');
+    CopyFile('imagens/div16.jpg', '/tmp/div16.jpg');
+    CopyFile('imagens/v.jpg', '/tmp/v.jpg');
+    CopyFile('imagens/traco.jpg', '/tmp/traco.jpg');
+    SetCurrentDir('/tmp/');                             // Seta diretorio atual no Temp
+    charset := 'ANSI';
+  end
+  else if OSVersion = 'Windows' then
+  begin
+    CopyFile('imagens/div2.jpg', 'C:/Windows/Temp/div2.jpg');   // Copia imagens para Temp
+    CopyFile('imagens/div8.jpg', 'C:/Windows/Temp/div8.jpg');
+    CopyFile('imagens/div16.jpg', 'C:/Windows/Temp/div16.jpg');
+    CopyFile('imagens/v.jpg', 'C:/Windows/Temp/v.jpg');
+    CopyFile('imagens/traco.jpg', 'C:/Windows/Temp/traco.jpg');
+    SetCurrentDir('C:/Windows/Temp/');                  // Seta diretorio atual no Temp
+    charset := 'UTF-8';
+  end;
+end;
+
 // Botões ------------------------------------------------------------------------------------------------------------
 
 procedure TfrmCalculo.bttSobreClick(Sender: TObject);  // Sobre
@@ -87,6 +117,25 @@ begin
 end;
 
 // Previsão de erros e outros ----------------------------------------------------------------------------------------
+
+function TfrmCalculo.OSVersion: string;                // Verifica O.S.
+begin
+  {$IFDEF LCLcarbon}
+  OSVersion := 'Mac OS X 10';
+  {$ELSE}
+  {$IFDEF Linux}
+  OSVersion := 'Linux Kernel';
+  {$ELSE}
+  {$IFDEF UNIX}
+  OSVersion := 'Unix';
+  {$ELSE}
+  {$IFDEF WINDOWS}
+  OSVersion:= 'Windows';
+  {$ENDIF}
+  {$ENDIF}
+  {$ENDIF}
+  {$ENDIF}
+end;
 
 procedure TfrmCalculo.Edit1Click(Sender: TObject);
 begin
@@ -159,7 +208,7 @@ begin
   // -------------------------------------
 
 
-  AssignFile(arq, 'bin/index.html');
+  AssignFile(arq, 'index.html');
 
   if not reescrever then                //Hexadecimal --> octal // Passo 2
   begin
@@ -176,7 +225,7 @@ begin
     valorSTR := Edit1.text; //QG
 
     WriteLn(arq, '<html>');                       // Abre HTML
-    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>');
+    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset='+charset+'"></head>');
     WriteLn(arq, '<body>');
   end;
 
@@ -321,7 +370,8 @@ begin
   SLvalor.Free;
   SLresto.Free;
 
-  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  //IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  IpHtmlPanel1.OpenURL(expandLocalHtmlFileName('index.html'));
 end;
 
 // Escrever HTML Tabela ----------------------------------------------------------------------------------------------
@@ -357,11 +407,11 @@ begin
 
   // --------------------------------------
 
-  AssignFile(arq, 'bin/index.html');
+  AssignFile(arq, 'index.html');
   ReWrite(arq);
 
   WriteLn(arq, '<html>');
-  WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>');
+  WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset='+charset+'"></head>');
   WriteLn(arq, '<body>');
 
   if not reescrever then      // Hexadecimal --> octal // Passo 1
@@ -474,7 +524,7 @@ begin
   CloseFile(arq);
 
   //HTMLViewer1.LoadfromFile('bin/index.html');
-  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('index.html'));
 end;
 
 // Escrever HTML Regra de separação ----------------------------------------------------------------------------------
@@ -548,7 +598,7 @@ begin
 
   // Escreve HTML ----------
 
-  AssignFile(arq, 'bin/index.html');
+  AssignFile(arq, 'index.html');
 
 
   if not reescrever then                // Octal --> Hexa -- Passo 2
@@ -564,7 +614,7 @@ begin
     ReWrite(arq);
 
     WriteLn(arq, '<html>');
-    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>');
+    WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset='+charset+'"></head>');
     WriteLn(arq, '<body>');
   end;
 
@@ -616,13 +666,13 @@ begin
   CloseFile(arq);
 
   //HTMLViewer1.LoadfromFile('bin/index.html');
-  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('index.html'));
 
   SLbinarios.Free;
   SLoctais.Free;
 end;
 
-// Escrever HTML Decomposisao -----------------------------------------------------------------------------------------
+// Escrever HTML Decomposisao ----------------------------------------------------------------------------------------
 
 procedure TfrmCalculo.EscreverHTMLdecomposisao(valor : string; base : integer);
 var
@@ -697,11 +747,11 @@ begin
 
   // Escreve HTML com decomposição ----------------
 
-  AssignFile(arq, 'bin/index.html');
+  AssignFile(arq, 'index.html');
   ReWrite(arq);
 
   WriteLn(arq, '<html>');
-  WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset=ANSI"></head>');
+  WriteLn(arq, '<head><meta http-equiv="content-type" content="text/html; charset='+charset+'"></head>');
   WriteLn(arq, '<body>');
 
   if not reescrever then                // Octal --> Hexa -- Passo 1
@@ -794,7 +844,7 @@ begin
 
   CloseFile(arq);
 
-  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('bin/index.html'));
+  IpHtmlPanel1.OpenURL(ExpandLocalHtmlFileName('index.html'));
 
   SLdecomposto.Free;
 end;
@@ -920,6 +970,24 @@ end;
 procedure TfrmCalculo.bttBaseClick(Sender: TObject);                // Tabela
 begin
   frmTabela.ShowModal;
+end;
+
+// FIM ---------------------------------------------------------------------------------------------------------------
+
+procedure TfrmCalculo.FormClose(Sender: TObject; var CloseAction: TCloseAction);   // Limpa pasta Temp
+begin
+  if FileExists('div2.jpg') then
+    DeleteFile('div2.jpg');
+  if FileExists('div8.jpg') then
+    DeleteFile('div8.jpg');
+  if FileExists('div16.jpg') then
+    DeleteFile('div16.jpg');
+  if FileExists('v.jpg') then
+    DeleteFile('v.jpg');
+  if FileExists('traco.jpg') then
+    DeleteFile('traco.jpg');
+  if FileExists('index.html') then
+    DeleteFile('index.html');
 end;
 
 end.

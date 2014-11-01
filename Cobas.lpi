@@ -79,9 +79,6 @@
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <CodeGeneration>
-      <TargetOS Value="linux"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>

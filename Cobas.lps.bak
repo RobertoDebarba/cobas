@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="Cobas.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Cobas"/>
+        <UsageCount Value="142"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ucalculo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCalculo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCalculo"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="247"/>
+        <CursorPos X="43" Y="259"/>
+        <FoldState Value=" T7EGV T3iJ03211 pkEpI0{yG"/>
+        <UsageCount Value="142"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="uTabela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTabela"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTabela"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7"/>
+        <CursorPos X="20" Y="14"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uSobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSobre"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="41" Y="10"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Umain.pas"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Umain"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="67" Y="18"/>
+        <UsageCount Value="133"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../thtmlport/package/htmlview.pas"/>
+        <UnitName Value="htmlview"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="805"/>
+        <CursorPos X="35" Y="817"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:/lazarus/packager/registration/fcllaz.pas"/>
+        <UnitName Value="fcllaz"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="64" Column="3" TopLine="56"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="70" Column="5" TopLine="57"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="636" Column="14" TopLine="630"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="647" Column="37" TopLine="635"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="655" Column="31" TopLine="650"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="664" Column="31" TopLine="642"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="673" Column="41" TopLine="660"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="643" Column="26" TopLine="633"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="672" Column="127" TopLine="657"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="674" Column="127" TopLine="659"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="46" Column="11" TopLine="40"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="52" Column="13" TopLine="34"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uSobre.pas"/>
+        <Caret Line="9" Column="41" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uSobre.pas"/>
+        <Caret Line="10" Column="41" TopLine="1"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="241" Column="130" TopLine="70"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="243" Column="130" TopLine="72"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="645" Column="83" TopLine="87"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="763" Column="65" TopLine="510"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="653" Column="1" TopLine="524"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="732" Column="1" TopLine="719"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="409" Column="61" TopLine="393"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="733" Column="1" TopLine="722"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="406" Column="1" TopLine="395"/>
+      </Position23>
+      <Position24>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="407" Column="1" TopLine="395"/>
+      </Position24>
+      <Position25>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="573" Column="37" TopLine="560"/>
+      </Position25>
+      <Position26>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="559" Column="57" TopLine="547"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="664" Column="32" TopLine="647"/>
+      </Position27>
+      <Position28>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="663" Column="32" TopLine="645"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="664" Column="32" TopLine="647"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ucalculo.pas"/>
+        <Caret Line="261" Column="7" TopLine="230"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="SLvalor"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
